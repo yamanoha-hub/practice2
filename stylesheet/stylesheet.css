@@ -1,44 +1,29 @@
 @charset "UTF-8";
 
 body {
-  margin: 0;
-  padding: 0;
   font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体", sans-serif;
   font-weight: 500;
   color: #333;
   line-height: 2.0;
   letter-spacing: 0.1em;
 }
-
 *, *:before, *:after {
   -webkit-box-sizing: border-box;
   box-sizing: border-box
  }
-
 img {
   width: 100%;
   vertical-align: bottom;
 }
-
 figure {
   margin: 0;
 }
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
 ul,li,dl,dt,dd {
-  margin:0;
-  padding:0;
   list-style: none;
 }
-
 a { 
   transition: all .6s ease;
 }
-
 a:hover { 
   transition: all .6s ease;
 }
@@ -48,7 +33,6 @@ a:hover {
   margin: 0 auto;
   max-width: 1400px;
 }
-
 section h2 {
   font-size: 2rem;
 }
@@ -66,13 +50,11 @@ section h2 {
   position: absolute;
   z-index: 1;
 }
-
 .header h1 {
   margin-bottom: 25px;
   font-size: 2.5rem;
   color: #fff;
 }
-
 .header nav ul {
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -80,31 +62,22 @@ section h2 {
   align-items: center;
   font-size: 1.2rem;
 }
-
 .header nav ul li {
   margin: 0 20px;
 }
-
 header nav li a {
   color: #fff;
 }
-
 header nav li a:hover {
   opacity: 0.6;
 }
-
-header nav li a.phone {
+.header nav li.phone {
   margin: 0 30px 0 10px;
   padding: 0 25px;
   border: 1px solid #fff;
   line-height: 50px;
   display: block;
   color: #fff;
-}
-.phone {
-  color: #fff;
-  border: 1px solid #fff;
-  padding: 10px 20px;
 }
 
 .mainvisual {
@@ -117,13 +90,11 @@ header nav li a.phone {
   -webkit-clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
   clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
 }
-
 .mainvisual h2 {
   position: absolute;
   top: 50%;
   left: 10%;
   transform: translateY(-50%);
-  z-index: 1;
   font-size: 5vw;
   color: #fff;
 }
@@ -136,17 +107,15 @@ header nav li a.phone {
   display: -webkit-flex;
   display: flex;
 }
-
 .topics .heading {
   width: 35%;
 }
 .topics .content {
   width: 65%;
 }
-
 .topics .content table {
   width: 100%;
-  margin: 0 0 25% 0;
+  margin: 0 0 25px 0;
 }
 .topics .content th {
   padding: 20px 2em 20px 0;
@@ -155,12 +124,10 @@ header nav li a.phone {
 .topics .content td {
   border-bottom: 1px dotted;
 }
-
 .topics .content tr:last-of-type th,
 .topics .content tr:last-of-type td {
   border-bottom: none;
 }
-
 .topics .content .btn {
   margin: 0;
 }
@@ -174,7 +141,6 @@ header nav li a.phone {
   text-align: center;
   margin: 0 0 0 auto;
 }
-
 .topics .content .btn a:hover {
   background:  #333;
   color: #fff;
@@ -196,7 +162,7 @@ header nav li a.phone {
   content: "";
   width: 100%;
   height: 100%;
-  background-color: rbga(0,0,0,0.3);
+  background-color: rgba( 0, 0, 0, 0.3);
 }
 .institution .content {
   position: absolute;
@@ -258,18 +224,6 @@ header nav li a.phone {
   flex-wrap: wrap;
   transform: skewY(2deg);
 }
-.recruit li span {
-  position: absolute;
-  width: 100%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%) skewY(-2deg);
-  z-index: 2;
-  color: #fff;
-  font-size: 2rem;
-  text-align: center;
-}
-
 .recruit ul li {
   width: 48%;
   position: relative;
@@ -280,6 +234,7 @@ header nav li a.phone {
   top: 0;
   left: 0;
   width: 100%;
+  /* height: 100%; */
   padding-top: 43%;
   background: rgba( 50, 50, 50, 0.7);
   z-index: 1;
@@ -289,7 +244,6 @@ header nav li a.phone {
   background: rgba( 50, 50, 50, 0.4);
   transition: all .6s ease;
 }
-
 .recruit li span {
   position: absolute;
   width: 100%;
@@ -315,14 +269,13 @@ header nav li a.phone {
   display: flex;
   align-items: center;
 }
-.content::after {
+.contact::after {
   position: absolute;
   content: "";
   width: 100%;
   height: 100%;
-  background-color: rgba( 50, 50, 50, 0.3);
+  background-color: rgba( 0, 0, 0, 0.3);
 }
-
 .contact ul {
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -333,7 +286,6 @@ header nav li a.phone {
   z-index: 1;
   width: 100%;
 }
-
 .contact li {
   width: 300px;
   margin: 0 50px;
@@ -346,13 +298,12 @@ header nav li a.phone {
   text-align: center;
   padding: 1em 0;
 }
-
 .contact li a:hover {
   background: #fff;
   color: #333;
 }
 
-.footer {
+.footer section {
   padding-top: 120px;
 }
 .footer .high {
@@ -415,36 +366,36 @@ header nav li a.phone {
   header nav {
     display: none;
   }
-  .nav-button, .nav-button span {
+  .nav-btn, .nav-btn span {
     display: inline-block;
   }
 
-  .nav-button {
+  .nav-btn {
     position: relative;
     width: 30px;
     height: 26px;
   }
 
-  .nav-button span {
+  .nav-btn span {
     position: absolute;
     left: 0;
     width: 100%;
     height: 4px;
     background-color: #fff;
   }
-
-  .nav-button span:nth-of-type(1) {
+  .nav-btn span:nth-of-type(1) {
     top: 0;
   }
-  .nav-button span:nth-of-type(2) {
+  .nav-btn span:nth-of-type(2) {
     top: 11px;
   }
-  .nav-button span:nth-of-type(3) {
+  .nav-btn span:nth-of-type(3) {
     bottom: 0;
   }
   .mainvisual img {
     height: auto;
   }
+
   .topics {
     padding: 50px 5vw;
   }
@@ -461,6 +412,7 @@ header nav li a.phone {
   .topics .content {
     width: 100%;
   }
+
   .footer .high {
     display: block;
   }
@@ -470,12 +422,14 @@ header nav li a.phone {
   .topics {
     padding: 50px 0;
     width: 90%;
+    margin: 0 auto;
   }
   .topics .content .btn a {
     width: 35%;
     min-width: 200px;
     margin: 0 auto;
   }
+
   .recruit ul {
     transform: none;
   }
@@ -483,6 +437,7 @@ header nav li a.phone {
     transform: translate(-50%,-50%);
     font-size: 1.75rem;
   }
+
   .footer section {
     padding-top: 50px;
   }
@@ -511,7 +466,7 @@ header nav li a.phone {
 
   .institution .content {
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate( -50%, -50%);
   }
   .institution h2,p {
     text-align: center;
@@ -521,10 +476,12 @@ header nav li a.phone {
     min-width: 200px;
     margin: 0 auto;
   }
+
   .recruit ul li {
     width: 90%;
     margin: 0 auto 20px auto;
   }
+
   .footer .high h1,.low {
     text-align: center;
   }
