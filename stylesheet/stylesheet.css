@@ -80,17 +80,17 @@ header nav li a:hover {
   color: #fff;
 }
 
-.mainvisual {
+.main-visual {
   position: relative;
 }
-.mainvisual img {
+.main-visual img {
   height: 700px;
   object-fit: cover;
   object-position: 0 15%;
   -webkit-clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
   clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
 }
-.mainvisual h2 {
+.main-visual h2 {
   position: absolute;
   top: 50%;
   left: 10%;
@@ -392,7 +392,7 @@ header nav li a:hover {
   .nav-btn span:nth-of-type(3) {
     bottom: 0;
   }
-  .mainvisual img {
+  .main-visual img {
     height: auto;
   }
 
