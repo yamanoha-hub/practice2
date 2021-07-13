@@ -1,7 +1,6 @@
 @charset "UTF-8";
 
-
-
+/* base */
 body {
   font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体", sans-serif;
   font-weight: 500;
@@ -39,6 +38,10 @@ section h2 {
   font-size: 2rem;
 }
 
+/* ヘッダー */
+.hamburger, .open-menu {
+  display: none;
+}
 .header {
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -53,7 +56,7 @@ section h2 {
   z-index: 1;
 }
 .header h1 {
-  margin-bottom: 25px;
+  margin: 0 0 0 30px;
   font-size: 2.5rem;
   color: #fff;
 }
@@ -82,13 +85,32 @@ header nav li a:hover {
   color: #fff;
 }
 
+/* ページトップ */
+#page-top {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  right: 0;
+  bottom: 50px;
+  background: #003a75;
+  border-radius: 50%;
+  z-index: 10;
+}
+#page-top a {
+  display: block;
+  font-weight: 700;
+  font-size: 25px;
+  color: #fff;
+  text-align: center;
+}
+
+/* メインビジュアル */
 .main-visual {
   position: relative;
 }
 .main-visual img {
   height: 700px;
   object-fit: cover;
-  object-position: 0 15%;
   -webkit-clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
   clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
 }
@@ -101,8 +123,23 @@ header nav li a:hover {
   color: #fff;
 }
 
+/* トピック */
 .topics {
+  /* margin-top: 150px; */
   padding: 120px;
+  position: relative;
+}
+.topics::after {
+  content: "";
+  background-color: #f3f3f3;
+  height: 110%;
+  width: 30%;
+  position: absolute;
+  top: -10%;
+  left: 30%;
+  transform-origin: left top;
+  transform: skewX(30deg);
+  z-index: -1;
 }
 .topics .content-wrapper {
   display: -ms-flexbox;
@@ -111,6 +148,7 @@ header nav li a:hover {
 }
 .topics .heading {
   width: 35%;
+  position: relative;
 }
 .topics .content {
   width: 65%;
@@ -125,10 +163,6 @@ header nav li a:hover {
 }
 .topics .content td {
   border-bottom: 1px dotted;
-}
-.topics .content tr:last-of-type th,
-.topics .content tr:last-of-type td {
-  border-bottom: none;
 }
 .topics .content .btn {
   margin: 0;
@@ -148,6 +182,7 @@ header nav li a:hover {
   color: #fff;
 }
 
+/* 施設案内 */
 .institution {
   background: url(../images/photo-1.jpeg);
   background-size: cover;
@@ -159,7 +194,7 @@ header nav li a:hover {
   z-index: 1;
   width: 100%;
 }
-.institution:after {
+.institution::after {
   position: absolute;
   content: "";
   width: 100%;
@@ -198,6 +233,7 @@ header nav li a:hover {
   color: #333;
 }
 
+/* 採用情報 */
 .recruit {
   padding: 10% 0;
   position: relative;
@@ -214,7 +250,6 @@ header nav li a:hover {
   transform: skewX(-30deg);
   z-index: -1;
 }
-
 .recruit ul {
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -236,7 +271,7 @@ header nav li a:hover {
   top: 0;
   left: 0;
   width: 100%;
-  /* height: 100%; */
+  height: 100%;
   padding-top: 43%;
   background: rgba( 50, 50, 50, 0.7);
   z-index: 1;
@@ -258,6 +293,7 @@ header nav li a:hover {
   text-align: center;
 }
 
+/* 問い合わせ */
 .contact {
   width: 100%;
   height: 500px;
@@ -305,6 +341,7 @@ header nav li a:hover {
   color: #333;
 }
 
+/* フッター */
 .footer section {
   padding-top: 120px;
 }
@@ -315,7 +352,6 @@ header nav li a:hover {
   display: flex;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  align-items: flex-end;
 }
 .footer .high h1 {
   font-size: 1.5rem;
@@ -346,38 +382,44 @@ header nav li a:hover {
   font-size: 0.75rem;
 }
 
-
-
-
-
-
-
+/* プラグイン修正 */
+.bx-wrapper {
+  margin: 0;
+  border: 0;
+  box-shadow: none;
+  background: none;
+}
+.bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto {
+  bottom: 0;
+}
 
 
 @media screen and (max-width: 1199px) {
+  /* ヘッダー */
+  header nav, .open-menu {
+    display: none;
+  }
   .hamburger {
     display: block;
-    position: absolute;
-    right: 10px;
+    position:absolute;
+    right: 0px;
     top: 50%;
-    transform: translateY(-50％);
+    transform: translateY(-50%);
     width: 30px;
     height: 26px;
     cursor: pointer;
-  }
-  header nav {
-    display: none;
+    margin-right: 30px;
   }
   .nav-btn, .nav-btn span {
     display: inline-block;
+    transition: all .5s;
+    box-sizing: border-box;
   }
-
   .nav-btn {
     position: relative;
     width: 30px;
     height: 26px;
   }
-
   .nav-btn span {
     position: absolute;
     left: 0;
@@ -394,12 +436,49 @@ header nav li a:hover {
   .nav-btn span:nth-of-type(3) {
     bottom: 0;
   }
+  #btn01.active span:nth-of-type(1) {
+    -webkit-transform: translateY(11px) rotate(-45deg);
+    transform: translateY(11px) rotate(-45deg);
+  }
+  #btn01.active span:nth-of-type(2) {
+    opacity: 0;
+  }
+  #btn01.active span:nth-of-type(3) {
+    -webkit-transform: translateY(-11px) rotate(45deg);
+    transform: translateY(-11px) rotate(45deg);
+  }
+
+  /* .open-menuに#openがついたら */
+  .open {
+    background-color: #333;
+    display: block;
+    height: 100vh;
+    text-align: center;
+    font-size: 5vh;
+    padding-top: 100px;
+    z-index: 10;
+  }
+  .open nav ul li {
+    margin: 20px;
+  }
+  .open nav li a {
+    color: #fff;
+  }
+  .open nav li a:hover {
+    opacity: 0.6;
+  }
+
+  /* メインビジュアル */
   .main-visual img {
     height: auto;
   }
 
+  /* トピック */
   .topics {
     padding: 50px 5vw;
+  }
+  .topics::after {
+    left: 20%;
   }
   .topics .content-wrapper {
     display: block;
@@ -414,10 +493,6 @@ header nav li a:hover {
   .topics .content {
     width: 100%;
   }
-
-  .footer .high {
-    display: block;
-  }
 }
 
 @media screen and (max-width: 767px) {
@@ -426,12 +501,26 @@ header nav li a:hover {
     width: 90%;
     margin: 0 auto;
   }
+  .topics::after {
+    left: -100px;
+  }
   .topics .content .btn a {
     width: 35%;
     min-width: 200px;
     margin: 0 auto;
   }
+  .topics .content th {
+    padding: 0;
+    border: none;
+    font-size: 0.8rem;
+  }
+  .topics .content tr {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
 
+  /* 採用情報 */
   .recruit ul {
     transform: none;
   }
@@ -440,17 +529,21 @@ header nav li a:hover {
     font-size: 1.75rem;
   }
 
+  /* フッター */
   .footer section {
     padding-top: 50px;
+  }
+  .footer .high {
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer .high ul {
+    justify-content: start;
+    margin: 15px 0px;
   }
   .footer .high li {
     width: calc(100%/3);
     margin: 0 0 10px;
-  }
-  .footer .high li a {
-    display: block;
-    text-align: center;
-    padding: 0;
   }
 } 
 @media screen and (max-width: 479px) {
@@ -488,7 +581,3 @@ header nav li a:hover {
     text-align: center;
   }
 } 
-
-
-
-

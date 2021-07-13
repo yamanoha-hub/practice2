@@ -4,35 +4,67 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- font Awesome -->
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <!-- jquery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <!-- bxslider -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('.slider').bxSlider();
+    });
+  </script>
   <title>Practice2</title>
   <link rel="stylesheet" href="stylesheet/reset.css">
   <link rel="stylesheet" href="stylesheet/stylesheet.css">
+
 </head>
 <body>
   <header class="header">
     <h1>〇〇FITNESS</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">TOP</a></li>
+        <li><a href="#">施設案内</a></li>
+        <li><a href="recruit.html">採用情報</a></li>
+        <li><a href="#">お問い合わせ</a></li>
+        <li class="phone"><i class="fas fa-phone-alt"></i> 000-0000-0000</li>
+      </ul>
+    </nav>
     <section class="hamburger">
-      <a class="nav-btn" href="#">
+      <a class="nav-btn" id="btn01" href="#">
         <span></span>
         <span></span>
         <span></span>
       </a>
     </section>
+  </header>
+  <article class="open-menu">
     <nav>
       <ul>
         <li><a href="index.html">TOP</a></li>
         <li><a href="#">施設案内</a></li>
-        <li><a href="#">採用情報</a></li>
+        <li><a href="recruit.html">採用情報</a></li>
         <li><a href="#">お問い合わせ</a></li>
-        <li class="phone">012-0000-0000</li>
       </ul>
     </nav>
-
-  </header>
+  </article>
   <main>
-    
+    <div id="page-top">
+      <a href="">
+        <i class="fas fa-arrow-up"></i>
+      </a>
+    </div>
     <article class="main-visual">
-      <img src="../images/1.jpeg" alt="">
+      <ul class="slider">
+        <li><img src="../images/1.jpeg" alt=""></li>
+        <li><img src="../images/1.jpeg" alt=""></li>
+        <li><img src="../images/1.jpeg" alt=""></li>
+        <li><img src="../images/1.jpeg" alt=""></li>
+      </ul>
       <h2>鍛える。</h2>
     </article>
     <article class="topics">
@@ -122,5 +154,6 @@
       <p>&copy;〇〇FITNESS Co.,Ltd,</p>
     </section>
   </footer>
+  <script src="script.js"></script>
 </body>
 </html>
