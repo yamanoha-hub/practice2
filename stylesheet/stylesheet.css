@@ -1,5 +1,4 @@
 @charset "UTF-8";
-
 /* base */
 body {
   font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体", sans-serif;
@@ -38,6 +37,10 @@ section h2 {
   font-size: 2rem;
 }
 
+.sub-visual {
+  height: 200px;
+}
+
 /* ヘッダー */
 .hamburger, .open-menu {
   display: none;
@@ -53,7 +56,7 @@ section h2 {
   width: 100%;
   height: 100px;
   position: absolute;
-  z-index: 1;
+  z-index: 10;
 }
 .header h1 {
   margin: 0 0 0 30px;
@@ -84,17 +87,16 @@ header nav li a:hover {
   display: block;
   color: #fff;
 }
-
 /* ページトップ */
 #page-top {
   width: 50px;
   height: 50px;
   position: fixed;
-  right: 0;
+  right: 10px;
   bottom: 50px;
   background: #003a75;
   border-radius: 50%;
-  z-index: 10;
+  z-index: 5;
 }
 #page-top a {
   display: block;
@@ -111,8 +113,8 @@ header nav li a:hover {
 .main-visual img {
   height: 700px;
   object-fit: cover;
-  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
-  clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
+  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 85%);
+  clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 85%);
 }
 .main-visual h2 {
   position: absolute;
@@ -132,10 +134,10 @@ header nav li a:hover {
 .topics::after {
   content: "";
   background-color: #f3f3f3;
-  height: 110%;
+  height: 130%;
   width: 30%;
   position: absolute;
-  top: -10%;
+  top: -20%;
   left: 30%;
   transform-origin: left top;
   transform: skewX(30deg);
@@ -184,7 +186,7 @@ header nav li a:hover {
 
 /* 施設案内 */
 .institution {
-  background: url(../images/photo-1.jpeg);
+  background: url(../images/content.jpg);
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -297,7 +299,7 @@ header nav li a:hover {
 .contact {
   width: 100%;
   height: 500px;
-  background: url(../images/photo2-1.jpeg);
+  background: url(../images/contact.jpg);
   background-size: cover;
   background-position: center, center;
   background-repeat: no-repeat;
@@ -392,7 +394,172 @@ header nav li a:hover {
 .bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto {
   bottom: 0;
 }
+.bx-wrapper .bx-controls-direction a {
+  z-index: 1;
+}
 
+/* 施設案内ページ */
+.sv-company {
+  height: 350px;
+  background-image: url(../images/fv-company.jpg);
+  object-fit: cover;
+  background-size: cover;
+  background-position: center, center;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+.sv-company h2 {
+  font-size: 48px;
+  padding-top: 150px;
+  color: #fff;
+  border-bottom: 1px solid #fff;
+}
+.work-description01,
+.work-description02 {
+  margin: 100px;
+}
+.work-description01 dl,
+.work-description02 dl{
+  width: 100%;
+  position: relative;
+}
+.work-description01 dl dt img,
+.work-description02 dl dt img{
+  width: 60%;
+  height: 400px;
+  object-fit: cover;
+}
+.work-description01 dl dd,
+.work-description02 dl dd{
+  width: 60%;
+  position: absolute;
+  top: 30%;
+  right: 0;
+  background-color: #fff;
+  color: #333;
+  padding: 20px 30px;
+  box-shadow: 1px 1px 10px 1px #666;
+  line-height: 1.8;
+  z-index: 2;
+}
+.work-description02 dt{
+  display: flex;
+  justify-content: flex-end;
+}
+.work-description02 dd{
+  top: 40%;
+  left: 0%;
+}
+
+/* 採用情報 */
+.sv-recruit {
+  height: 350px;
+  background-image: url(../images/sv-recruit.jpg);
+  object-fit: cover;
+  background-size: cover;
+  background-position: center, center;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+.sv-recruit h2 {
+  font-size: 48px;
+  padding-top: 150px;
+  color: #fff;
+  border-bottom: 1px solid #fff;
+}
+
+/* お問い合わせ */
+.sv-contact {
+  height: 350px;
+  background-image: url(../images/sv-contact.jpg);
+  object-fit: cover;
+  background-size: cover;
+  background-position: center, center;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+.sv-contact h2 {
+  font-size: 48px;
+  padding-top: 150px;
+  color: #fff;
+  border-bottom: 1px solid #fff;
+}
+
+/* お問い合わせ */
+.form-content {
+  margin: 100px 100px 0;
+}
+.form-content dl {
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px dotted #676767;
+}
+.form-content dl:first-of-type {
+  border-top: 1px dotted #676767;
+}
+.form-content dt {
+  width: 200px;
+  box-sizing: border-box;
+}
+.form-content dd {
+  box-sizing: border-box;
+}
+.form-content dd input,
+.form-content dd select,
+.form-content dd textarea {
+  font-size: 1rem;
+  color: #777;
+  border: 1px solid #555;
+  background-color: #f5f5f5;
+  box-sizing: border-box;
+  padding: 5px;
+}
+.form-content dl.name dd input,
+.form-content dl.furigana dd input {
+  margin: 0 20px;
+}
+.form-content dl.mail dd input {
+  width: 400px;
+}
+.form-content dl.tel dd span,
+.form-content dl.zip dd span {
+  margin: 0 20px;
+}
+.form-content dl.pref dd select {
+  width: 200px;
+}
+.form-content dl.address input {
+  width: 700px;
+}
+.form-content dd textarea {
+  width: 300px;
+  height: 140px;
+  line-height: 2em;
+  padding: 5px;
+}
+.form-btn {
+  display: flex;
+  justify-content: center;
+  margin: 50px auto 0 auto;
+}
+.form-btn input {
+  display: block;
+  width: 250px;
+  line-height: 50px;
+  text-align: center;
+  color: #fff;
+  background-color: #353535;
+  border: 1px solid #353535;
+  margin: 0 15px;
+  cursor: pointer;
+  transition: .3s ease all;
+}
+.form-btn input:hover {
+  background-color: transparent;
+  color: #444;
+  transition: .3s ease all;
+}
 
 @media screen and (max-width: 1199px) {
   /* ヘッダー */
@@ -450,13 +617,15 @@ header nav li a:hover {
 
   /* .open-menuに#openがついたら */
   .open {
+    position: fixed;
     background-color: #333;
     display: block;
+    width: 100vw;
     height: 100vh;
     text-align: center;
     font-size: 5vh;
     padding-top: 100px;
-    z-index: 10;
+    z-index: 5;
   }
   .open nav ul li {
     margin: 20px;
@@ -469,16 +638,12 @@ header nav li a:hover {
   }
 
   /* メインビジュアル */
-  .main-visual img {
-    height: auto;
-  }
-
   /* トピック */
   .topics {
     padding: 50px 5vw;
   }
   .topics::after {
-    left: 20%;
+    left: 10%;
   }
   .topics .content-wrapper {
     display: block;
@@ -493,9 +658,45 @@ header nav li a:hover {
   .topics .content {
     width: 100%;
   }
+
+  /* 施設案内ページ */
+  .work-description01,
+  .work-description02 {
+    margin: 100px 30px 0;
+  }
+  .work-description01 dl dt img,
+  .work-description02 dl dt img{
+    height: auto;
+  }
+  .work-description01 dl dd,
+  .work-description02 dl dd {
+    top: 20%;
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  /* お問い合わせページ */
+  .form-content {
+    margin: 80px 50px 0;
+  }
+  .form-content dl {
+    display: block;
+  }
+  .form-content dt {
+    font-size: 20px;
+  }
+  .form-content dl.address input {
+    width: 600px;
+  }
+  .form-content dd textarea {
+    width: 400px;
+  }
 }
 
 @media screen and (max-width: 767px) {
+  .main-visual h2 {
+    font-size: 36px;
+  }
   .topics {
     padding: 50px 0;
     width: 90%;
@@ -545,8 +746,47 @@ header nav li a:hover {
     width: calc(100%/3);
     margin: 0 0 10px;
   }
-} 
+  /* 施設案内ページ */
+  .work-description01,
+  .work-description02 {
+    margin: 150px 10px 150px;
+  }
+  .work-description01 dl dd,
+  .work-description02 dl dd {
+    top: 10%;
+    padding: 10px 10px;
+    font-size: 12px;
+  }
+  .work-description01 dl dd h2,
+  .work-description02 dl dd h2 {
+    font-size: 18px;
+  }
+  .form-content dl.name dd input,
+  .form-content dl.furigana dd input {
+    width: 150px;
+    margin: 0 10px;
+  }
+  .form-content dl.tel dd input,
+  .form-content dl.zip dd input {
+    width: 100px;
+  }
+  /* お問い合わせページ */
+  .form-content {
+    margin: 20px 10px 0;
+  }
+  .form-content dt {
+    font-size: 16px;
+  }
+  .form-content dl.address input {
+    width: 400px;
+  }
+
+
+}
+
 @media screen and (max-width: 479px) {
+
+
   .topics .content th {
     display: block;
     width: 100%;
@@ -558,7 +798,6 @@ header nav li a:hover {
     display: block;
     width: 100%;
   }
-
   .institution .content {
     left: 50%;
     transform: translate( -50%, -50%);
