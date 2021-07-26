@@ -1,0 +1,70 @@
+body {
+  font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体", sans-serif;
+  font-weight: 500;
+  color: #333;
+  line-height: 2.0;
+  letter-spacing: 0.1em;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box
+}
+
+img {
+  width: 100%;
+  vertical-align: bottom;
+}
+
+figure {
+  margin: 0;
+}
+
+ul,
+li,
+dl,
+dt,
+dd {
+  list-style: none;
+}
+
+a {
+  transition: all .6s ease;
+}
+
+a:hover {
+  transition: all .6s ease;
+}
+
+.content-wrapper {
+  width: 95%;
+  margin: 0 auto;
+  max-width: 1400px;
+}
+
+section h2 {
+  font-size: 2rem;
+}
+
+.sub-visual {
+  height: 200px;
+}
+
+/* プラグイン修正 */
+.bx-wrapper {
+  margin: 0;
+  border: 0;
+  box-shadow: none;
+  background: none;
+}
+
+.bx-wrapper .bx-pager,
+.bx-wrapper .bx-controls-auto {
+  bottom: 0;
+}
+
+.bx-wrapper .bx-controls-direction a {
+  z-index: 1;
+}
