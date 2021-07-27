@@ -169,9 +169,9 @@ header nav li a:hover {
   margin: 0;
 }
 .topics .content .btn a {
-  display: block;
-  font-size: 0.8rem;
   color: #000;
+  display: block;
+  font-size: 0.875rem;
   border: 1px solid #000;
   width: 200px;
   line-height: 60px;
@@ -179,8 +179,8 @@ header nav li a:hover {
   margin: 0 0 0 auto;
 }
 .topics .content .btn a:hover {
-  background:  #333;
   color: #fff;
+  background:  #333;
 }
 
 /* 施設案内 */
@@ -230,8 +230,8 @@ header nav li a:hover {
   text-align: center;
 }
 .institution p.btn a:hover {
-  background: #fff;
   color: #333;
+  background: #fff;
 }
 
 /* 採用情報 */
@@ -353,6 +353,7 @@ header nav li a:hover {
   display: flex;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  
 }
 .footer .high h1 {
   font-size: 1.5rem;
@@ -484,7 +485,6 @@ header nav li a:hover {
   border-bottom: 1px solid #fff;
 }
 
-/* お問い合わせ */
 .form-content {
   margin: 100px 100px 0;
 }
@@ -548,15 +548,15 @@ header nav li a:hover {
   line-height: 50px;
   text-align: center;
   color: #fff;
-  background-color: #353535;
-  border: 1px solid #353535;
+  background-color: #333;
+  border: 1px solid #333;
   margin: 0 15px;
   cursor: pointer;
   transition: .3s ease all;
 }
 .form-btn input:hover {
   background-color: transparent;
-  color: #444;
+  color: #333;
   transition: .3s ease all;
 }
 

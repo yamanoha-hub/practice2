@@ -1,0 +1,47 @@
+$nameList: company, recruit, contact;
+
+@mixin btn($normal-color, $hover-color, $hover-bg) {
+  a {
+    color: $normal-color;
+    display: block;
+    border: 1px solid $normal-color;
+    line-height: 60px;
+    text-align: center;
+    &:hover {
+      color: $hover-color;
+      background-color: $hover-bg;
+    }
+  }
+}
+@mixin flex {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+@mixin background {
+  object-fit: cover;
+  background-size: cover;
+  background-position: center, center;
+  background-repeat: no-repeat;
+}
+
+@mixin sub-visual {
+  height: 350px;
+  object-fit: cover;
+  background-size: cover;
+  background-position: center, center;
+  background-repeat: no-repeat;
+  text-align: center;
+
+  h2 {
+    font-size: 48px;
+    padding-top: 150px;
+    color: #fff;
+    border-bottom: 1px solid #fff;
+  }
+}
