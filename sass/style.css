@@ -386,7 +386,7 @@ section h2 {
 .recruit::after {
   content: "";
   background-color: #f3f3f3;
-  height: 150%;
+  height: 160%;
   width: 40%;
   position: absolute;
   top: -10%;

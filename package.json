@@ -1,5 +1,5 @@
 {
-  "name": "practice2",
+  "name": "practice1",
   "version": "1.0.0",
   "description": "",
   "main": "script.js",
@@ -8,15 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yamanoha-hub/practice2.git"
+    "url": "git+https://github.com/yamanoha-hub/practice1.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/yamanoha-hub/practice2/issues"
+    "url": "https://github.com/yamanoha-hub/practice1/issues"
   },
-  "homepage": "https://github.com/yamanoha-hub/practice2#readme",
+  "homepage": "https://github.com/yamanoha-hub/practice1#readme",
   "devDependencies": {
     "gulp": "^4.0.2",
     "gulp-sass": "^5.0.0"
