@@ -17,7 +17,9 @@ gulp.task('sass', function() {
     .pipe(sassGlob())
     .pipe(sass({outputStyle: 'expanded'}))
     .pipe(postcss([mqpacker()]))
-    .pipe(postcss([autoprefixer()]))  //ベンダープレフレックスを自動付与
+    .pipe(postcss([
+      autoprefixer()
+    ]))  //ベンダープレフレックスを自動付与
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('./css'));
 });

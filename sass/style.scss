@@ -2,15 +2,10 @@
 @import "_reset";  //リセット
 @import "_base";  //サイト全体の設定
 @import "_variables"; //変数
+@import "_parts"; //
 @import "_mixin"; //
 
 // ヘッダー
-.hamburger,
-.open-menu {
-  display: none;
-  
-}
-
 .header {
   @include flex;
   height: 100px;
@@ -28,7 +23,6 @@
     font-size: 1.2rem;
     li {
       margin: 0 20px;
-
       a {
         color: #fff;
 
@@ -45,26 +39,6 @@
     line-height: 50px;
     display: block;
     color: #fff;
-  }
-}
-
-// ページトップ
-#page-top {
-  width: 50px;
-  height: 50px;
-  position: fixed;
-  right: 10px;
-  bottom: 50px;
-  background: #003a75;
-  border-radius: 50%;
-  z-index: 5;
-
-  a {
-    display: block;
-    font-weight: 700;
-    font-size: 25px;
-    color: #fff;
-    text-align: center;
   }
 }
 
@@ -87,6 +61,11 @@
     font-size: 5vw;
     color: #fff;
   }
+  @media screen and (max-width: 767px) {
+    h2 {
+      font-size: 36px;
+    }
+  }
 }
 
 /* トピック */
@@ -108,8 +87,6 @@
   }
 
   .content-wrapper {
-    display: -ms-flexbox;
-    display: -webkit-flex;
     display: flex;
   }
 
@@ -139,6 +116,61 @@
       width: 200px;
       font-size: 0.875rem;
       margin-left: auto;
+    }
+  }
+  @media screen and (max-width: 1199px) {
+    padding: 50px 5vw;
+    &::after {
+    left: 10%;
+    }
+    .content-wrapper {
+      display: block;
+      .heading {
+        width: 100%;
+        h2 {
+          text-align: center;
+          margin-bottom: 5vw;
+        }
+      }
+      .content {
+        width: 100%;
+      }
+    }
+  }
+  @media screen and (max-width: 767px) {
+    padding: 50px 0;
+    width: 90%;
+    margin: 0 auto;
+    &::after {
+      left: -100px;
+    }
+    .content .btn a {
+      width: 35%;
+      min-width: 200px;
+      margin: 0 auto;
+      th {
+        padding: 0;
+        border: none;
+        font-size: 0.8rem;
+        tr {
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 479px) {
+    .topics .content th {
+      display: block;
+      width: 100%;
+      text-align: left;
+      padding: 1.25em 0 0 0;
+      border-bottom: 0;
+    }
+    .topics .content td {
+      display: block;
+      width: 100%;
     }
   }
 }
@@ -183,6 +215,20 @@
       font-size: 0.875rem;
     }
   }
+  @media screen and (max-width: 479px) {
+    .institution .content {
+      left: 50%;
+      transform: translate( -50%, -50%);
+    }
+    .institution h2,p {
+      text-align: center;
+    }
+    .institution p.btn a {
+      width: 30%;
+      min-width: 200px;
+      margin: 0 auto;
+    }
+  }
 }
 
 /* 採用情報 */
@@ -193,7 +239,7 @@
   &::after {
     content: "";
     background-color: #f3f3f3;
-    height: 160%;
+    height: 150%;
     width: 40%;
     position: absolute;
     top: -10%;
@@ -205,7 +251,6 @@
 
   ul {
     @include flex;
-    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     transform: skewY(2deg);
 
@@ -244,6 +289,25 @@
       }
     }
   }
+  @media screen and (max-width: 767px) {
+    ul {
+      transform: none;
+    }
+    li span {
+      transform: translate(-50%,-50%);
+      font-size: 1.75rem;
+    }
+  }
+  @media screen and (max-width: 479px) {
+    .recruit ul li {
+      width: 90%;
+      margin: 0 auto 20px auto;
+    }
+  
+    .footer .high h1,.low {
+      text-align: center;
+    }
+  }
 }
 
 /* 問い合わせ */
@@ -251,11 +315,9 @@
   width: 100%;
   height: 500px;
   background: url(../images/contact.jpg);
-
   @include background;
-  position: relative;
   @include flex;
-  text-align: center;
+  position: relative;
 
   &::after {
     position: absolute;
@@ -267,7 +329,6 @@
 
   ul {
     @include flex;
-    -webkit-justify-content: center;
     justify-content: center;
     z-index: 1;
     width: 100%;
@@ -283,7 +344,7 @@
 
 /* フッター */
 .footer {
-  padding-top: 120px;
+  padding-top: 100px;
   .high {
     @include flex;
     border-bottom: 1px solid #333;
@@ -291,13 +352,11 @@
       font-size: 1.5rem;
     }
     ul {
-      display: -ms-flexbox;
-      display: -webkit-flex;
       display: flex;
 
       li a {
         color: #333;
-        padding: 0 25px;
+        margin: 0 25px;
         &:hover {
           opacity: 0.6;
         }
@@ -315,6 +374,22 @@
   p {
     text-align: center;
     font-size: 0.75rem;
+  }
+  @media screen and (max-width: 767px) {
+    .high {
+      flex-direction: column;
+      text-align: center;
+      ul {
+        justify-content: start;
+        margin: 15px 0px;
+        li {
+          margin: 0 0 10px;
+        }
+      }
+    }
+    .low {
+      text-align: center;
+    }
   }
 }
 
@@ -352,6 +427,28 @@
       z-index: 2;
     }
   }
+  @media screen and (max-width: 1199px) {
+    margin: 100px 30px 0;
+    dl dt img{
+      height: auto;
+    }
+    dl dd {
+      top: 20%;
+      padding: 10px 20px;
+      font-size: 14px;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    margin: 150px 10px 150px;
+    dl dd {
+    top: 10%;
+    padding: 10px 10px;
+    font-size: 12px;
+      h2 {
+        font-size: 18px;
+      }
+    }
+  }
 }
 
 .work-description02 {
@@ -381,7 +478,6 @@ background-image: url(../images/sv-recruit.jpg);
 
 .form-content {
   margin: 100px 100px 0;
-
   dl {
     display: flex;
     align-items: center;
@@ -452,6 +548,34 @@ background-image: url(../images/sv-recruit.jpg);
         color: #333;
         transition: .3s ease all;
       }
+    }
+  }
+  @media screen and (max-width: 1199px) {
+    margin: 80px 50px 0;
+    dl {
+      display: block;
+      dt {
+        font-size: 20px;
+      }
+    }
+  }
+  @media screen and (max-width: 767px) {
+    margin: 20px 10px 0;
+    dt {
+      font-size: 16px;
+    }
+    .name dd input,
+    .furigana dd input {
+      width: 150px;
+      margin: 0 10px;
+    }
+    .tel dd input,
+    .zip dd input {
+      width: 100px;
+    }
+    .mail dd input,
+    .address dd input {
+      width: 100%;
     }
   }
 }
