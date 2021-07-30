@@ -31,5 +31,8 @@
   },
   "dependencies": {
     "sass": "^1.36.0"
-  }
+  },
+  "browserslist": [
+    "last 2 versions"
+  ]
 }

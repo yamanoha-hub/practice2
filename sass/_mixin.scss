@@ -14,10 +14,7 @@ $nameList: company, recruit, contact;
   }
 }
 @mixin flex {
-  display: -ms-flexbox;
-  display: -webkit-flex;
   display: flex;
-  -ms-flex-pack: justify;
   justify-content: space-between;
   align-items: center;
   width: 100%;
@@ -29,6 +26,38 @@ $nameList: company, recruit, contact;
   background-position: center, center;
   background-repeat: no-repeat;
 }
+
+@mixin topics-bg {
+  &::after {
+    content: "";
+    background-color: #f3f3f3;
+    height: 130%;
+    width: 30%;
+    position: absolute;
+    top: -20%;
+    left: 30%;
+    transform-origin: left top;
+    transform: skewX(30deg);
+    z-index: -1;
+  }
+}
+
+@mixin recruit-bg {
+  &::after {
+    content: "";
+    background-color: #f3f3f3;
+    height: 150%;
+    width: 40%;
+    position: absolute;
+    top: -10%;
+    left: 30%;
+    transform-origin: left top;
+    transform: skewX(-30deg);
+    z-index: -1;
+  }
+}
+
+
 
 @mixin sub-visual {
   height: 350px;

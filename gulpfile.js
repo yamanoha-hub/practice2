@@ -9,7 +9,6 @@ var postcss = require('gulp-postcss');
 var autoprefixer = require('autoprefixer');
 var mqpacker = require('css-mqpacker');
 
-
 gulp.task('sass', function() {
   return gulp.src('./sass/**/*.scss')
     .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))  //エラー時に停止させずメッセージを出す。
@@ -17,7 +16,9 @@ gulp.task('sass', function() {
     .pipe(sassGlob())
     .pipe(sass({outputStyle: 'expanded'}))
     .pipe(postcss([mqpacker()]))
-    .pipe(postcss([autoprefixer()]))  //ベンダープレフレックスを自動付与
+    .pipe(postcss([
+      autoprefixer()
+    ]))  //ベンダープレフレックスを自動付与
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('./css'));
 });

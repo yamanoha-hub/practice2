@@ -760,6 +760,8 @@ header nav li a:hover {
   .work-description02 dl dd h2 {
     font-size: 18px;
   }
+
+  /* お問い合わせページ */
   .form-content dl.name dd input,
   .form-content dl.furigana dd input {
     width: 150px;
@@ -769,7 +771,6 @@ header nav li a:hover {
   .form-content dl.zip dd input {
     width: 100px;
   }
-  /* お問い合わせページ */
   .form-content {
     margin: 20px 10px 0;
   }
@@ -779,13 +780,9 @@ header nav li a:hover {
   .form-content dl.address input {
     width: 400px;
   }
-
-
 }
 
 @media screen and (max-width: 479px) {
-
-
   .topics .content th {
     display: block;
     width: 100%;

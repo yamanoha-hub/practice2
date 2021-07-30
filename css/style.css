@@ -82,6 +82,7 @@ body {
 *,
 *:before,
 *:after {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -103,10 +104,12 @@ dd {
 }
 
 a {
+  -webkit-transition: all 0.6s ease;
   transition: all 0.6s ease;
 }
 
 a:hover {
+  -webkit-transition: all 0.6s ease;
   transition: all 0.6s ease;
 }
 
@@ -124,11 +127,11 @@ section h2 {
   height: 200px;
 }
 
-/* プラグイン修正 */
 .bx-wrapper {
   margin: 0;
   border: 0;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   background: none;
 }
 
@@ -146,10 +149,33 @@ section h2 {
   display: none;
 }
 
+#page-top {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  right: 10px;
+  bottom: 50px;
+  background: #003a75;
+  border-radius: 50%;
+  z-index: 5;
+}
+#page-top a {
+  display: block;
+  font-weight: 700;
+  font-size: 25px;
+  color: #fff;
+  text-align: center;
+}
 .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
   height: 100px;
   position: absolute;
@@ -161,9 +187,15 @@ section h2 {
   color: #fff;
 }
 .header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
   font-size: 1.2rem;
 }
@@ -184,25 +216,6 @@ section h2 {
   color: #fff;
 }
 
-#page-top {
-  width: 50px;
-  height: 50px;
-  position: fixed;
-  right: 10px;
-  bottom: 50px;
-  background: #003a75;
-  border-radius: 50%;
-  z-index: 5;
-}
-#page-top a {
-  display: block;
-  font-weight: 700;
-  font-size: 25px;
-  color: #fff;
-  text-align: center;
-}
-
-/* メインビジュアル */
 .main-visual {
   position: relative;
 }
@@ -211,18 +224,18 @@ section h2 {
   -o-object-fit: cover;
      object-fit: cover;
   -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 85%);
-  clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 85%);
+          clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 85%);
 }
 .main-visual h2 {
   position: absolute;
   top: 50%;
   left: 10%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   font-size: 5vw;
   color: #fff;
 }
 
-/* トピック */
 .topics {
   padding: 120px;
   position: relative;
@@ -235,11 +248,15 @@ section h2 {
   position: absolute;
   top: -20%;
   left: 30%;
-  transform-origin: left top;
-  transform: skewX(30deg);
+  -webkit-transform-origin: left top;
+          transform-origin: left top;
+  -webkit-transform: skewX(30deg);
+          transform: skewX(30deg);
   z-index: -1;
 }
 .topics .content-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 .topics .heading {
@@ -277,7 +294,6 @@ section h2 {
   background-color: #333;
 }
 
-/* 施設案内 */
 .institution {
   background: url(../images/content.jpg);
   -o-object-fit: cover;
@@ -301,7 +317,8 @@ section h2 {
 .institution .content {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   z-index: 2;
 }
 .institution .content h2 {
@@ -329,7 +346,6 @@ section h2 {
   background-color: #fff;
 }
 
-/* 採用情報 */
 .recruit {
   padding: 10% 0;
   position: relative;
@@ -337,22 +353,32 @@ section h2 {
 .recruit::after {
   content: "";
   background-color: #f3f3f3;
-  height: 160%;
+  height: 150%;
   width: 40%;
   position: absolute;
   top: -10%;
   left: 30%;
-  transform-origin: left top;
-  transform: skewX(-30deg);
+  -webkit-transform-origin: left top;
+          transform-origin: left top;
+  -webkit-transform: skewX(-30deg);
+          transform: skewX(-30deg);
   z-index: -1;
 }
 .recruit ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
-  flex-wrap: wrap;
-  transform: skewY(2deg);
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-transform: skewY(2deg);
+          transform: skewY(2deg);
 }
 .recruit ul li {
   width: 48%;
@@ -368,6 +394,7 @@ section h2 {
   padding-top: 43%;
   background: rgba(50, 50, 50, 0.7);
   z-index: 1;
+  -webkit-transition: all 0.6s ease;
   transition: all 0.6s ease;
 }
 .recruit ul li span {
@@ -375,7 +402,8 @@ section h2 {
   width: 100%;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) skewY(-2deg);
+  -webkit-transform: translate(-50%, -50%) skewY(-2deg);
+          transform: translate(-50%, -50%) skewY(-2deg);
   z-index: 2;
   color: #fff;
   font-size: 2rem;
@@ -383,10 +411,10 @@ section h2 {
 }
 .recruit ul li a:hover figure::after {
   background: rgba(50, 50, 50, 0.4);
+  -webkit-transition: all 0.6s ease;
   transition: all 0.6s ease;
 }
 
-/* 問い合わせ */
 .contact {
   width: 100%;
   height: 500px;
@@ -396,12 +424,17 @@ section h2 {
   background-size: cover;
   background-position: center, center;
   background-repeat: no-repeat;
-  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
-  text-align: center;
+  position: relative;
 }
 .contact::after {
   position: absolute;
@@ -411,11 +444,19 @@ section h2 {
   background-color: rgba(0, 0, 0, 0.3);
 }
 .contact ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   z-index: 1;
   width: 100%;
 }
@@ -436,14 +477,19 @@ section h2 {
   background-color: #fff;
 }
 
-/* フッター */
 .footer {
-  padding-top: 120px;
+  padding-top: 100px;
 }
 .footer .high {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
   border-bottom: 1px solid #333;
 }
@@ -451,11 +497,13 @@ section h2 {
   font-size: 1.5rem;
 }
 .footer .high ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 .footer .high ul li a {
   color: #333;
-  padding: 0 25px;
+  margin: 0 25px;
 }
 .footer .high ul li a:hover {
   opacity: 0.6;
@@ -472,7 +520,6 @@ section h2 {
   font-size: 0.75rem;
 }
 
-/* 施設案内ページ */
 .sv-company {
   height: 350px;
   -o-object-fit: cover;
@@ -514,21 +561,25 @@ section h2 {
   right: 0;
   background-color: #fff;
   padding: 20px 30px;
-  box-shadow: 1px 1px 10px 1px #666;
+  -webkit-box-shadow: 1px 1px 10px 1px #666;
+          box-shadow: 1px 1px 10px 1px #666;
   line-height: 1.8;
   z-index: 2;
 }
 
 .work-description02 dt {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 .work-description02 dd {
   top: 40%;
   left: 0%;
 }
 
-/* 採用情報 */
 .sv-recruit {
   height: 350px;
   -o-object-fit: cover;
@@ -546,7 +597,6 @@ section h2 {
   border-bottom: 1px solid #fff;
 }
 
-/* お問い合わせ */
 .sv-contact {
   height: 350px;
   -o-object-fit: cover;
@@ -568,8 +618,12 @@ section h2 {
   margin: 100px 100px 0;
 }
 .form-content dl {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 20px 0;
   border-bottom: 1px dotted #676767;
 }
@@ -578,7 +632,8 @@ section h2 {
 }
 .form-content dl dt {
   width: 200px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 .form-content dl input,
 .form-content dl select,
@@ -587,7 +642,8 @@ section h2 {
   color: #777;
   border: 1px solid #555;
   background-color: #f5f5f5;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 5px;
 }
 .form-content .name dd input,
@@ -610,8 +666,12 @@ section h2 {
   padding: 5px;
 }
 .form-content .form-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 50px auto 0 auto;
 }
 .form-content .form-btn input {
@@ -624,11 +684,272 @@ section h2 {
   border: 1px solid #333;
   margin: 0 15px;
   cursor: pointer;
+  -webkit-transition: 0.3s ease all;
   transition: 0.3s ease all;
 }
 .form-content .form-btn input:hover {
   background-color: transparent;
   color: #333;
+  -webkit-transition: 0.3s ease all;
   transition: 0.3s ease all;
+}
+@media screen and (max-width: 1199px) {
+  header nav, .open-menu {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    width: 30px;
+    height: 26px;
+    cursor: pointer;
+    margin-right: 30px;
+  }
+
+  .nav-btn, .nav-btn span {
+    display: inline-block;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+
+  .nav-btn {
+    position: relative;
+    width: 30px;
+    height: 26px;
+  }
+
+  .nav-btn span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #fff;
+  }
+
+  .nav-btn span:nth-of-type(1) {
+    top: 0;
+  }
+
+  .nav-btn span:nth-of-type(2) {
+    top: 11px;
+  }
+
+  .nav-btn span:nth-of-type(3) {
+    bottom: 0;
+  }
+
+  #btn01.active span:nth-of-type(1) {
+    -webkit-transform: translateY(11px) rotate(-45deg);
+    transform: translateY(11px) rotate(-45deg);
+  }
+
+  #btn01.active span:nth-of-type(2) {
+    opacity: 0;
+  }
+
+  #btn01.active span:nth-of-type(3) {
+    -webkit-transform: translateY(-11px) rotate(45deg);
+    transform: translateY(-11px) rotate(45deg);
+  }
+
+  .open {
+    position: fixed;
+    background-color: #333;
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    font-size: 5vh;
+    padding-top: 100px;
+    z-index: 5;
+  }
+
+  .open nav ul li {
+    margin: 20px;
+  }
+
+  .open nav li a {
+    color: #fff;
+  }
+
+  .open nav li a:hover {
+    opacity: 0.6;
+  }
+  .topics {
+    padding: 50px 5vw;
+  }
+  .topics::after {
+    left: 10%;
+  }
+  .topics .content-wrapper {
+    display: block;
+  }
+  .topics .content-wrapper .heading {
+    width: 100%;
+  }
+  .topics .content-wrapper .heading h2 {
+    text-align: center;
+    margin-bottom: 5vw;
+  }
+  .topics .content-wrapper .content {
+    width: 100%;
+  }
+  .work-description01,
+.work-description02 {
+    margin: 100px 30px 0;
+  }
+  .work-description01 dl dt img,
+.work-description02 dl dt img {
+    height: auto;
+  }
+  .work-description01 dl dd,
+.work-description02 dl dd {
+    top: 20%;
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+  .form-content {
+    margin: 80px 50px 0;
+  }
+  .form-content dl {
+    display: block;
+  }
+  .form-content dl dt {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .main-visual h2 {
+    font-size: 36px;
+  }
+  .topics {
+    padding: 50px 0;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .topics::after {
+    left: -100px;
+  }
+  .topics .content .btn a {
+    width: 35%;
+    min-width: 200px;
+    margin: 0 auto;
+  }
+  .topics .content .btn a th {
+    padding: 0;
+    border: none;
+    font-size: 0.8rem;
+  }
+  .topics .content .btn a th tr {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 20px;
+  }
+  .recruit ul {
+    -webkit-transform: none;
+            transform: none;
+  }
+  .recruit li span {
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    font-size: 1.75rem;
+  }
+  .footer .high {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+  .footer .high ul {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    margin: 15px 0px;
+  }
+  .footer .high ul li {
+    margin: 0 0 10px;
+  }
+  .footer .low {
+    text-align: center;
+  }
+  .work-description01,
+.work-description02 {
+    margin: 150px 10px 150px;
+  }
+  .work-description01 dl dd,
+.work-description02 dl dd {
+    top: 10%;
+    padding: 10px 10px;
+    font-size: 12px;
+  }
+  .work-description01 dl dd h2,
+.work-description02 dl dd h2 {
+    font-size: 18px;
+  }
+  .form-content {
+    margin: 20px 10px 0;
+  }
+  .form-content dt {
+    font-size: 16px;
+  }
+  .form-content .name dd input,
+.form-content .furigana dd input {
+    width: 150px;
+    margin: 0 10px;
+  }
+  .form-content .tel dd input,
+.form-content .zip dd input {
+    width: 100px;
+  }
+  .form-content .mail dd input,
+.form-content .address dd input {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 479px) {
+  .topics .topics .content th {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 1.25em 0 0 0;
+    border-bottom: 0;
+  }
+  .topics .topics .content td {
+    display: block;
+    width: 100%;
+  }
+  .institution .institution .content {
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  .institution .institution h2, .institution p {
+    text-align: center;
+  }
+  .institution .institution p.btn a {
+    width: 30%;
+    min-width: 200px;
+    margin: 0 auto;
+  }
+  .recruit .recruit ul li {
+    width: 90%;
+    margin: 0 auto 20px auto;
+  }
+  .recruit .footer .high h1, .recruit .low {
+    text-align: center;
+  }
 }
 /*# sourceMappingURL=style.css.map */
