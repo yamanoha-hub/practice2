@@ -7,16 +7,7 @@
   <!-- font Awesome -->
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
   <!-- jquery -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <!-- bxslider -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
-  <script>
-    $(document).ready(function(){
-      $('.slider').bxSlider();
-    });
-  </script>
+  <script src="js/jquery-3.6.0.min.js"></script>
   <title>Practice2</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -64,38 +55,54 @@
         <dl class="name">
           <dt>氏名</dt>
           <dd>
-            <span>姓</span><input type="text"><span>名</span><input type="text">
+            <p class="alert">Alert : 未解答</p>
+            <span>姓</span>
+            <input type="text">
+            <span>名</span>
+            <input type="text">
           </dd>
         </dl>
         <dl class="furigana">
           <dt>フリガナ</dt>
           <dd>
-            <span>セイ</span><input type="text"><span>メイ</span><input type="text">
+            <p class="alert">Alert : 未解答</p>
+            <span>セイ</span>
+            <input type="text">
+            <span>メイ</span>
+            <input type="text">
           </dd>
         </dl>
         <dl class="mail">
           <dt>メールアドレス</dt>
           <dd>
+            <p class="alert">Alert : 未解答</p>
             <input type="text">
           </dd>
         </dl>
         <dl class="tel">
           <dt>電話番号</dt>
           <dd>
-            <input type="text"><span>-</span><input type="text"><span>-</span><input type="text">
+            <p class="alert">Alert : 未解答</p>
+            <input type="text">
+            <span>-</span>
+            <input type="text">
+            <span>-</span>
+            <input type="text">
           </dd>
         </dl>
         <dl class="zip">
           <dt>郵便番号</dt>
           <dd>
+            <p class="alert">Alert : 未解答</p>
             <input type="text"><span>-</span><input type="text">
           </dd>
         </dl>
         <dl class="pref">
           <dt>都道府県</dt>
           <dd>
+            <p class="alert">Alert : 未解答</p>
             <select>
-              <option value="" selected="">都道府県</option>
+              <option value="" selected=""></option>
               <option value="北海道">北海道</option>
               <option value="青森県">青森県</option>
               <option value="岩手県">岩手県</option>
@@ -149,17 +156,19 @@
         <dl class="address">
           <dt>住所</dt>
           <dd>
+            <p class="alert">Alert : 未解答</p>
             <input type="text">
           </dd>
         </dl>
         <dl class="multi-text">
           <dt>お問い合わせ内容</dt>
           <dd>
-          <textarea></textarea>
+            <p class="alert">Alert : 未解答</p>
+            <textarea></textarea>
           </dd>
         </dl>
         <section class="form-btn">
-          <input type="button" value="送信する">
+          <input type="button" value="送信する" id="submitBtn">
         </section>
       </form>
     </section>
@@ -182,6 +191,6 @@
       <p>&copy;〇〇FITNESS Co.,Ltd,</p>
     </section>
   </footer>
-  <script src="script.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
