@@ -166,6 +166,10 @@ section h2 {
   color: #fff;
   text-align: center;
 }
+body > p {
+  background-color: aquamarine;
+}
+
 .header {
   display: -webkit-box;
   display: -ms-flexbox;

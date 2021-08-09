@@ -5,6 +5,12 @@
 @import "_parts"; //
 @import "_mixin"; //
 
+// テスト
+body>p {
+  background-color: aquamarine;
+}
+
+
 // ヘッダー
 .header {
   @include flex;
