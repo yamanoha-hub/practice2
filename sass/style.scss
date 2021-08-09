@@ -5,6 +5,11 @@
 @import "_mixin"; //mixin定義
 
 
+// テスト
+body > p {
+  background-color: aquamarine;
+}
+
 // ヘッダー
 .header {
   @include flex;
