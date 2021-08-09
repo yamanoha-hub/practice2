@@ -216,6 +216,7 @@ section h2 {
   color: #fff;
 }
 
+/* メインビジュアル */
 .main-visual {
   position: relative;
 }
@@ -694,6 +695,7 @@ section h2 {
   transition: 0.3s ease all;
 }
 @media screen and (max-width: 1199px) {
+  /* ヘッダー */
   header nav, .open-menu {
     display: none;
   }
@@ -759,6 +761,7 @@ section h2 {
     transform: translateY(-11px) rotate(45deg);
   }
 
+  /* .open-menuに#openがついたら */
   .open {
     position: fixed;
     background-color: #333;

@@ -24,7 +24,7 @@
 }
 
 @media screen and (max-width: 1199px) {
-  // ヘッダー
+  /* ヘッダー */
   header nav, .open-menu {
     display: none;
   }
@@ -77,7 +77,7 @@
     transform: translateY(-11px) rotate(45deg);
   }
 
-  // .open-menuに#openがついたら
+  /* .open-menuに#openがついたら */
   .open {
     position: fixed;
     background-color: #333;
@@ -98,4 +98,5 @@
   .open nav li a:hover {
     opacity: 0.6;
   }
+  
 }

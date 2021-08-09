@@ -1,9 +1,9 @@
 @charset "UTF-8";
 @import "_reset";  //リセット
 @import "_base";  //サイト全体の設定
-@import "_parts"; //パーツ
-@import "_mixin"; //mixin定義
-
+@import "_variables"; //変数
+@import "_parts"; //
+@import "_mixin"; //
 
 // ヘッダー
 .header {
@@ -42,7 +42,7 @@
   }
 }
 
-// メインビジュアル
+/* メインビジュアル */
 .main-visual {
   position: relative;
 
@@ -222,7 +222,6 @@
 .recruit {
   padding: 10% 0;
   position: relative;
-
   @include recruit-bg;
 
   ul {
