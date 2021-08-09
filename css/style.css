@@ -168,6 +168,7 @@ section h2 {
 }
 body > p {
   background-color: aquamarine;
+  color: #333;
 }
 
 .header {
@@ -220,6 +221,7 @@ body > p {
   color: #fff;
 }
 
+/* メインビジュアル */
 .main-visual {
   position: relative;
 }
@@ -698,6 +700,7 @@ body > p {
   transition: 0.3s ease all;
 }
 @media screen and (max-width: 1199px) {
+  /* ヘッダー */
   header nav, .open-menu {
     display: none;
   }
@@ -763,6 +766,7 @@ body > p {
     transform: translateY(-11px) rotate(45deg);
   }
 
+  /* .open-menuに#openがついたら */
   .open {
     position: fixed;
     background-color: #333;
